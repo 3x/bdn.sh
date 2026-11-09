@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <title>{{ title }} - {{ site.title }}</title>
+    
+    <link rel="stylesheet" href="/assets/fonts.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax.css">
+    		<!-- <link
+			href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+			rel="stylesheet"
+		/> -->
+
+</head>
+<body>
+    <div class="all">
+        {% include "partials/header.html" %}
+        <main>{% block content %}{% endblock %}</main>
+        {% include "partials/footer.html" %}
+    </div>
+
+    <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+</body>
+</html>

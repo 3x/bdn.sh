@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Go';
+    src: url('/assets/fonts/go/Go-BoldItalic.woff2') format('woff2'),
+        url('/assets/fonts/go/Go-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Go';
+    src: url('/assets/fonts/go/Go-Bold.woff2') format('woff2'),
+        url('/assets/fonts/go/Go-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Go';
+    src: url('/assets/fonts/go/Go-Italic.woff2') format('woff2'),
+        url('/assets/fonts/go/Go-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Go';
+    src: url('/assets/fonts/go/Go-Regular.woff2') format('woff2'),
+        url('/assets/fonts/go/Go-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Go Mono';
+    src: url('/assets/fonts/go-mono/GoMono-BoldItalic.woff2') format('woff2'),
+        url('/assets/fonts/go-mono/GoMono-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Go Mono';
+    src: url('/assets/fonts/go-mono/GoMono-Bold.woff2') format('woff2'),
+        url('/assets/fonts/go-mono/GoMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Go Mono';
+    src: url('/assets/fonts/go-mono/GoMono-Italic.woff2') format('woff2'),
+        url('/assets/fonts/go-mono/GoMono-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Go Mono';
+    src: url('/assets/fonts/go-mono/GoMono-Regular.woff2') format('woff2'),
+        url('/assets/fonts/go-mono/GoMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

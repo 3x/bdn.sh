@@ -1,0 +1,207 @@
+:root {
+	--font-main: "Go", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-code: "Go Mono", monospace;
+	--color-link: teal;
+	--color-link-hover: #004242;
+	--color-background: silver;
+	--color-background-code: #333;
+	--color-text: #000;
+	--color-blockquote-background: #d2d2d2;
+	--color-blockquote-text: inherit;
+	--header-background: linear-gradient(90deg, navy, #1084d0);
+
+	--border: 3px solid #ffffff33;
+
+	--color-frame-lighter: #ffffff;
+	--color-frame-light: #dfdfdf;
+	--color-frame: #c0c0c0;
+	--color-frame-dark: grey;
+	--color-frame-darker: #0a0a0a;
+
+	--frame-inset:
+		inset -2px -2px var(--color-frame-lighter),
+		inset 2px 2px var(--color-frame-dark),
+		inset -4px -4px var(--color-frame-light),
+		inset 4px 4px var(--color-frame-darker);
+}
+
+/* removed until light theme is finished */
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #202020;
+		--color-background-secondary: #303030;
+		--color-text: silver;
+		--color-frame-lighter: #202020;
+		--color-frame-light: #303030;
+		--color-frame: #c0c0c0;
+		--color-frame-dark: #181818;
+		--color-frame-darker: #070707;
+	}
+} */
+
+/* used to set the whole page's background, <body> acts as a card above it */
+html {
+	background: #222;
+	background-image: url("/assets/chrome/spectre.svg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	/* prevents background moving on page scroll */
+}
+
+body {
+	font-family: var(--font-main);
+	max-width: 750px;
+	margin: 2rem auto;
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-size: 1rem;
+	padding: 1rem;
+
+	box-shadow:
+		inset -2px -2px var(--color-frame-darker),
+		inset -4px -4px var(--color-frame-dark),
+		inset 2px 2px var(--color-frame-lighter),
+		inset 4px 4px var(--color-frame-light);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* margin-bottom: 1rem; */
+	padding: 0.75rem;
+	box-shadow: var(--frame-inset);
+	background: var(--header-background);
+
+	& a {
+		color: white;
+
+		&:hover {
+			color: white;
+			font-style: italic;
+		}
+	}
+}
+
+.title {
+	font-weight: bold;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+
+	& a {
+		text-decoration: none;
+	}
+}
+
+.title::before {
+	content: "";
+	background-image: url("/assets/chrome/bdn-icon-128.png");
+	background-size: 100% 100%;
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	margin-right: 0.75rem;
+	margin-bottom: 6px;
+}
+
+p {
+	line-height: 1.5;
+	margin-top: 0;
+}
+
+a {
+	color: var(--color-link);
+
+	&:hover {
+		color: var(--color-link-hover);
+	}
+}
+
+footer {
+	padding: 0;
+	padding-top: 1rem;
+	border-top: 2px solid grey;
+}
+
+.final-footer {
+	box-shadow:
+        inset -2px -2px #dfdfdf,
+        inset 2px 2px grey;
+    background: #a4a4a4;
+	padding: 4px 8px;
+	font-size: 0.8rem;
+    color: #4f4f4f;
+
+	& a {
+		color: inherit;
+
+		&:hover {
+			text-decoration: none
+		}
+	}
+}
+
+.badges {
+	display: flex;
+	gap: 10px;
+	margin-bottom: .5rem;
+}
+
+.badges img {
+	image-rendering: pixelated;
+	width: 88px;
+	height: 31px;
+}
+
+nav {
+
+	& ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+	}
+
+	& li {
+		padding: 4px;
+	}
+}
+
+blockquote {
+	background: var(--color-blockquote-background);
+	color: var(--color-blockquote-text);
+	margin: 0;
+	margin-left: 8px;
+	border-left: 4px solid gray;
+	padding: 1rem;
+}
+
+pre,
+code,
+kbd {
+	font-family: var(--font-code);
+	font-size: 0.9rem;
+}
+
+code {
+	background: var(--color-background-code);
+	padding: 2px 5px;
+	color: white;
+}
+
+pre {
+	background: var(--color-background-code);
+	box-shadow: var(--frame-inset);
+	padding: 8px 10px;
+
+	&>code {
+		background: none;
+		padding: 0;
+	}
+}
+
+main {
+	padding: 1rem 0;
+}

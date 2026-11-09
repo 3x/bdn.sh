@@ -1,0 +1,15 @@
+<footer>
+    <div class="badges">
+        <iframe src="//incr.easrng.net/badge?key=bdn" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
+        {% for badge in site.badges %}
+            {% if badge.url == none %}
+            <img src="/assets/buttons/{{ badge.src }}" alt="{{ badge.text }}">
+            {% else %}
+            <a href="{{ badge.url }}"><img src="/assets/buttons/{{ badge.src }}" alt="{{ badge.text }}"></a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="final-footer">
+        <span>unless otherwise specified, all site content is released under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>.</span>
+    </div>
+</footer>

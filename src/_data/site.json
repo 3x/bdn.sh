@@ -1,0 +1,17 @@
+{
+    "title": "brendan hersh",
+    "url": "https://bdn.sh",
+    "navItems": [
+        { "text": "home", "url": "/" },
+        { "text": "about", "url": "/about/" },
+        { "text": "blog", "url": "/blog/" },
+        { "text": "pages", "url": "/pages/" },
+        { "text": "contact", "url": "/contact/" }
+    ],
+    "badges": [
+        { "text": "Pride flag", "url": null, "src": "pride.png" },
+        { "text": "Kagi search engine", "url": "https://kagi.com", "src": "kagi.png" },
+        { "text": "Fedora Linux", "url": "https://fedoraproject.org", "src": "fedora.png" },
+        { "text": "uBlock Origin", "url": "https://github.com/gorhill/uBlock", "src": "ublock-origin.png" }
+    ]
+}
