@@ -23,6 +23,14 @@
 		inset 2px 2px var(--color-frame-dark),
 		inset -4px -4px var(--color-frame-light),
 		inset 4px 4px var(--color-frame-darker);
+
+	--frame-outset:
+		inset -2px -2px var(--color-frame-darker),
+		inset -4px -4px var(--color-frame-dark),
+		inset 2px 2px var(--color-frame-lighter),
+		inset 4px 4px var(--color-frame-light);
+
+	--page-width: 700px;
 }
 
 /* removed until light theme is finished */
@@ -51,18 +59,14 @@ html {
 
 body {
 	font-family: var(--font-main);
-	max-width: 750px;
+	max-width: var(--page-width);
 	margin: 2rem auto;
 	background-color: var(--color-background);
 	color: var(--color-text);
 	font-size: 1rem;
 	padding: 1rem;
 
-	box-shadow:
-		inset -2px -2px var(--color-frame-darker),
-		inset -4px -4px var(--color-frame-dark),
-		inset 2px 2px var(--color-frame-lighter),
-		inset 4px 4px var(--color-frame-light);
+	box-shadow: var(--frame-outset);
 }
 
 header {
