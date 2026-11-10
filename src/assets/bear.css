@@ -1,0 +1,252 @@
+:root {
+    --width: 720px;
+    --font-main: "RecVar", sans-serif;
+    --font-secondary: "RecVar", sans-serif;
+    --font-settings-mono: "MONO" 1, "CASL" 0.6, "wght" 400, "slnt" 0, "CRSV" 1;
+    --font-scale: 1em;
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color:  #8b6fcb;
+    --code-background-color: #000;
+    --code-color: #ddd;
+    --blockquote-color: #ccc;
+}
+
+html {
+    background: #222;
+    background-image: url("https://cdn.bdn.sh/website-images/tiles-bg-dark-big.svg");
+    background-size: cover;
+    background-position: center;
+    
+    /* prevent background image from moving on page scroll */
+    background-attachment: fixed;
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: 2rem auto;
+    padding: 5px 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+    border: 2px solid #ffffff33;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+nav a {
+    margin-right: 8px;
+    --mono: "MONO" 1;
+    --casl: "CASL" 0;
+    --wght: "wght" 400;
+    --slnt: "slnt" 0;
+    --CRSV: "CRSV" 0.5;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+    transition: 0.25s;
+}
+
+nav a:hover {
+    --mono: "MONO" 1;
+    --casl: "CASL" 0;
+    --wght: "wght" 650;
+    --slnt: "slnt" 0;
+    --CRSV: "CRSV" 0.5;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+}
+
+strong, b {
+    color: var(--heading-color);
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+time {
+ 	font-family: var(--font-main);
+  	font-style: normal;
+  	font-size: 15px;
+}
+
+main {
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed;
+}
+
+img {
+    max-width: 100%;
+}
+
+code {
+    font-family: var(--font-main);
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+}
+
+footer {
+    padding: 25px 0;
+}
+
+footer > span:not(#footer-directive) {
+    display: none;
+}
+
+.final-footer span {
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+/* copied from <codeberg.org> */
+.pride-banner {
+    margin-top: 1em;
+    height: .25em;
+    background: linear-gradient(90deg,#ea392f 0% 9.091%,#f28917 9.091% 18.182%,#eecb12 18.182% 27.273%,#78b82a 27.273% 36.364%,#4375ca 36.364% 45.455%,#c346e3 45.455% 54.545%,#7bcce5 54.545% 63.636%,#eaeaea 63.636% 72.727%,#f4aec8 72.727% 81.818%,#000 81.818% 90.909%,#945516 90.909% 100%);
+}
+
+.badges img {
+    image-rendering: pixelated;
+}
+
+.badges-label {
+    margin-bottom: 2px;
+}
+
+.badge-dump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffffff33;
+}
+
+.title {
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    --mono: "MONO" 0;
+    --casl: "CASL" 0.6;
+    --wght: "wght" 650;
+    --slnt: "slnt" 0;
+    --CRSV: "CRSV" 1;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+    transition: 0.25s;
+}
+
+a.title:hover {
+    text-decoration: none;
+    --mono: "MONO" 0;
+    --casl: "CASL" 1;
+    --wght: "wght" 900;
+    --slnt: "slnt" -8;
+    --CRSV: "CRSV" 1;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+}
+
+.title h1 {
+    font-size: 1.5em;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+.title::before {
+    content: "";
+    background-image: url("https://cdn.bdn.sh/website-images/bdn-icon-128.png");
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin-right: 0.75rem;
+    margin-bottom: 6px;
+}
+
+.inline {
+    width: auto !important;
+}
+
+.highlight {
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+/* blog post list */
+ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+}
+
+ul.blog-posts li {
+    display: flex;
+}
+
+ul.blog-posts li span {
+    flex: 0 0 130px;
+}
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+
+pre, code, kbd, time {
+    font-variation-settings: var(--font-settings-mono);
+}
+
+/* specify <main> so titles in header and footer aren't effected */
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 32px;
+}

@@ -1,3 +1,9 @@
+/* 2026-11-10: Switched this site to use my current Bear Blog theme @ bear.css.
+ * This file is is currently unreferenced in the base.html template, so it
+ * won't actually be served. Just keeping it around until I make a a formal
+ * theme system and selector for the site
+ */
+
 :root {
 	--font-main: "Go", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-code: "Go Mono", monospace;
@@ -126,6 +132,8 @@ a {
 footer {
 	padding: 0;
 	padding-top: 1rem;
+	padding-left: .5rem;
+	padding-right: .5rem;
 	border-top: 2px solid grey;
 }
 
@@ -207,5 +215,5 @@ pre {
 }
 
 main {
-	padding: 1rem 0;
+	padding: 1rem .5rem;
 }
