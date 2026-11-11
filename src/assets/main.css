@@ -1,219 +1,198 @@
-/* 2026-11-10: Switched this site to use my current Bear Blog theme @ bear.css.
- * This file is is currently unreferenced in the base.html template, so it
- * won't actually be served. Just keeping it around until I make a a formal
- * theme system and selector for the site
- */
-
+/* stylelint-disable no-descending-specificity */
 :root {
-	--font-main: "Go", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--font-code: "Go Mono", monospace;
-	--color-link: teal;
-	--color-link-hover: #004242;
-	--color-background: silver;
-	--color-background-code: #333;
-	--color-text: #000;
-	--color-blockquote-background: #d2d2d2;
-	--color-blockquote-text: inherit;
-	--header-background: linear-gradient(90deg, navy, #1084d0);
+    --font-body: "Go", verdana, sans-serif;
+    --font-mono: "Go Mono", monospace;
+    --page-width: 720px;
+    --color-page-background: #01242e;
+    --color-heading: #eee;
+    --color-body: #ddd;
+    --color-link: #8cc2dd;
+    --color-link-hover: #98e5d7;
+    --color-code-background: #00181e;
 
-	--border: 3px solid #ffffff33;
-
-	--color-frame-lighter: #ffffff;
-	--color-frame-light: #dfdfdf;
-	--color-frame: #c0c0c0;
-	--color-frame-dark: grey;
-	--color-frame-darker: #0a0a0a;
-
-	--frame-inset:
-		inset -2px -2px var(--color-frame-lighter),
-		inset 2px 2px var(--color-frame-dark),
-		inset -4px -4px var(--color-frame-light),
-		inset 4px 4px var(--color-frame-darker);
-
-	--frame-outset:
-		inset -2px -2px var(--color-frame-darker),
-		inset -4px -4px var(--color-frame-dark),
-		inset 2px 2px var(--color-frame-lighter),
-		inset 4px 4px var(--color-frame-light);
-
-	--page-width: 700px;
 }
 
-/* removed until light theme is finished */
-/* @media (prefers-color-scheme: dark) {
-	:root {
-		--color-background: #202020;
-		--color-background-secondary: #303030;
-		--color-text: silver;
-		--color-frame-lighter: #202020;
-		--color-frame-light: #303030;
-		--color-frame: #c0c0c0;
-		--color-frame-dark: #181818;
-		--color-frame-darker: #070707;
-	}
-} */
-
-/* used to set the whole page's background, <body> acts as a card above it */
 html {
-	background: #222;
-	background-image: url("/assets/chrome/spectre.svg");
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	/* prevents background moving on page scroll */
+    background: #222;
+    background-image: url("/assets/chrome/spectre.svg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 body {
-	font-family: var(--font-main);
-	max-width: var(--page-width);
-	margin: 2rem auto;
-	background-color: var(--color-background);
-	color: var(--color-text);
-	font-size: 1rem;
-	padding: 1rem;
-
-	box-shadow: var(--frame-outset);
+    font-family: var(--font-body);
+    max-width: var(--page-width);
+    margin: 2rem auto;
+    background: var(--color-page-background);
+    border: 2px solid #fff3;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: var(--color-body);
+    padding: 5px 20px;
 }
 
 header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/* margin-bottom: 1rem; */
-	padding: 0.75rem;
-	box-shadow: var(--frame-inset);
-	background: var(--header-background);
-
-	& a {
-		color: white;
-
-		&:hover {
-			color: white;
-			font-style: italic;
-		}
-	}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fff3;
+    padding: 10px 0;
 }
 
 .title {
-	font-weight: bold;
-	font-size: 1.5rem;
-	display: flex;
-	align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
 
-	& a {
-		text-decoration: none;
-	}
-}
+    &:hover, &:focus {
+        font-style: italic;
+    }
 
-.title::before {
-	content: "";
-	background-image: url("/assets/chrome/bdn-icon-128.png");
-	background-size: 100% 100%;
-	display: inline-block;
-	width: 38px;
-	height: 38px;
-	margin-right: 0.75rem;
-	margin-bottom: 6px;
-}
+    & h1 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
 
-p {
-	line-height: 1.5;
-	margin-top: 0;
-}
-
-a {
-	color: var(--color-link);
-
-	&:hover {
-		color: var(--color-link-hover);
-	}
-}
-
-footer {
-	padding: 0;
-	padding-top: 1rem;
-	padding-left: .5rem;
-	padding-right: .5rem;
-	border-top: 2px solid grey;
-}
-
-.final-footer {
-	box-shadow:
-        inset -2px -2px #dfdfdf,
-        inset 2px 2px grey;
-    background: #a4a4a4;
-	padding: 4px 8px;
-	font-size: 0.8rem;
-    color: #4f4f4f;
-
-	& a {
-		color: inherit;
-
-		&:hover {
-			text-decoration: none
-		}
-	}
-}
-
-.badges {
-	display: flex;
-	gap: 10px;
-	margin-bottom: .5rem;
-}
-
-.badges img {
-	image-rendering: pixelated;
-	width: 88px;
-	height: 31px;
+    &::before {
+        content: "";
+        background-image: url("/assets/chrome/bdn-icon-128.png");
+        background-size: 100% 100%;
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        margin-right: .75rem;
+        margin-bottom: 6px;
+    }
 }
 
 nav {
+    & ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
 
-	& ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-	}
-
-	& li {
-		padding: 4px;
-	}
+    & li {
+        padding: 4px;
+    }
 }
 
-blockquote {
-	background: var(--color-blockquote-background);
-	color: var(--color-blockquote-text);
-	margin: 0;
-	margin-left: 8px;
-	border-left: 4px solid gray;
-	padding: 1rem;
+
+
+a {
+    color: var(--color-link);
+
+    &:hover, &:focus {
+        color: var(--color-link-hover);
+        text-decoration: none;
+    }
 }
 
-pre,
-code,
-kbd {
-	font-family: var(--font-code);
-	font-size: 0.9rem;
+footer {
+    padding: 20px 0;
+    border-top: 2px solid #fff3;
+}
+
+.final-footer {
+    font-size: .8rem;
+    opacity: .5;
+}
+
+.badges {
+    display: flex;
+    gap: 10px;
+}
+
+.badges img {
+    image-rendering: pixelated;
+    width: 88px;
+    height: 31px;
+}
+
+pre, code {
+    background: var(--color-code-background);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
 }
 
 code {
-	background: var(--color-background-code);
-	padding: 2px 5px;
-	color: white;
+    padding: 2px 4px;
+    border: 1px solid #fff2;
 }
 
 pre {
-	background: var(--color-background-code);
-	box-shadow: var(--frame-inset);
-	padding: 8px 10px;
+    padding: 10px;
+    border: 1px solid #fff2;
 
-	&>code {
-		background: none;
-		padding: 0;
-	}
+    & > code {
+        padding: 0;
+        background: none;
+        border: none;
+    }
 }
 
-main {
-	padding: 1rem .5rem;
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    border-left: 5px solid #ffffff42;
+    background: #ffffff0f;
+    padding: 5px;
+    padding-left: 10px;
+    margin-left: 4px;
+    font-style: italic;
+
+    & p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1;
+    margin-bottom: .5rem;
+}
+
+table {
+	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+	border-collapse: collapse;
+	width: 100%
+}
+
+td,
+th {
+	border: 1px solid #ffffff20;
+	text-align: left;
+	padding: .5rem;
+}
+
+th {
+	background: #ffffff30;
+}
+
+tr:nth-child(even) {
+	/* Set every other cell slightly darker. Improves readability. */
+	background: #ffffff10;
+}
+
+table caption {
+	font-weight: bold;
+	margin-bottom: .5rem;
+}
+
+article {
+    margin: 1rem 0;
+}
+
+.notice {
+    border: 1px solid goldenrod;
+    background: #daa52042;
+    margin: 1rem;
+    padding: 1rem;
 }
