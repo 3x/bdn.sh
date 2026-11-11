@@ -8,7 +8,7 @@ For styling markdown
 
 # Paragraph styling
 
-This is some paragraph text with **bold text** and _italic text_ and [a link](#).
+This is some paragraph text with **bold text** and _italic text_ and [a link](#) and `inline code`.
 
 - List item
 - Another list item
@@ -19,6 +19,14 @@ This is some paragraph text with **bold text** and _italic text_ and [a link](#)
 > Blockquote text
 >
 > Another line
+
+```py
+import antigravity
+
+if __name__ == "__main__":
+    foo = str(42)
+    print(f"hello {foo}")
+```
 
 ---
 
